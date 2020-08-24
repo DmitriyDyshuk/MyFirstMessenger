@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "754888782924",
+    "firebase_url": "https://alphamessenger-d7bc5.firebaseio.com",
+    "project_id": "alphamessenger-d7bc5",
+    "storage_bucket": "alphamessenger-d7bc5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:754888782924:android:a5c0ac2af71f91cdc3f0e9",
+        "android_client_info": {
+          "package_name": "com.example.messengeralpha"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "754888782924-98meoe1v1uojmd4pv3j8d9m6omm836et.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYKC1DzQG5UC4jYxQypIeOYjDBwGoUtKM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "754888782924-98meoe1v1uojmd4pv3j8d9m6omm836et.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MessengerAlpha</string>
+
+    <!--Login Screen-->
+    <string name="login_screen_title">AlphaMessenger</string>
+    <string name="login_screen_hint_email">Email</string>
+    <string name="login_screen_hint_password">Пароль</string>
+    <string name="login_screen_forgot_password">Забыли пароль?</string>
+    <string name="login_screen_have_not_acc">Ещё нет аккаунта?</string>
+    <string name="login_screen_registration">Зарегистрироваться</string>
+
+</resources>
