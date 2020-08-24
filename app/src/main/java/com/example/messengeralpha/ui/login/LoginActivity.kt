@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Toast
 import com.example.messengeralpha.R
 import com.example.messengeralpha.db.FirebaseDatabase
+import com.example.messengeralpha.db.RealmHelper
 import com.example.messengeralpha.db.callbacks.OnLoginListener
 import com.example.messengeralpha.db.model.User
 import com.example.messengeralpha.ui.main.MainActivity
@@ -25,8 +26,8 @@ class LoginActivity : AppCompatActivity() {
             FirebaseDatabase().checkOnUserExist(etEmail.text.toString(), etPassword.text.toString(), object :
                 OnLoginListener {
                 override fun onUserWasReceived(user: User) {
-                    val intent = Intent(this@LoginActivity, MainActivity::class.java)
-                    startActivity(intent)
+                    RealmHelper().saveUserToRealm(user)
+                    MainActivity.startActivity(this@LoginActivity)
                 }
 
                 override fun onUserDoseNotExist() {

@@ -1,5 +1,7 @@
 package com.example.messengeralpha.ui.main
 
+import android.content.Context
+import android.content.Intent
 import android.content.res.ColorStateList
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,6 +13,13 @@ import com.example.messengeralpha.ui.main.presenter.MainPagerAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+    companion object {
+        fun startActivity(context: Context?) {
+            context?.startActivity(Intent(context, MainActivity::class.java))
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -30,7 +39,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initAdapter() {
-        var adapter = MainPagerAdapter(supportFragmentManager)
+        val adapter = MainPagerAdapter(supportFragmentManager)
         vpPager.adapter = adapter
     }
 

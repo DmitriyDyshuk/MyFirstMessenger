@@ -5,8 +5,10 @@ import android.os.Bundle
 import android.widget.Toast
 import com.example.messengeralpha.R
 import com.example.messengeralpha.db.FirebaseDatabase
+import com.example.messengeralpha.db.RealmHelper
 import com.example.messengeralpha.db.model.User
 import com.example.messengeralpha.db.callbacks.OnLoginListener
+import com.example.messengeralpha.ui.main.MainActivity
 import com.example.messengeralpha.utils.isEmail
 import kotlinx.android.synthetic.main.activity_registration.*
 
@@ -44,7 +46,8 @@ class RegistrationActivity : AppCompatActivity() {
                             user.password = etPassword.text.toString().replace(" ", "")
                             fb?.addUser(user)
                             fb = null
-                            finish()
+                            RealmHelper().saveUserToRealm(user)
+                            MainActivity.startActivity(this@RegistrationActivity)
                         }
                     }
                 }

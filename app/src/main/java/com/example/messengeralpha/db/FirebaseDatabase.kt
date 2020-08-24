@@ -58,7 +58,8 @@ class FirebaseDatabase {
                 val users = ArrayList<User>()
                 snapshot.children.forEach {
                     val user = it.getValue(User::class.java)
-                    if (user != null) {
+                    val realmUser = RealmHelper().getUser()
+                    if (user != null && user.id != realmUser?.id) {
                         users.add(user)
                     }
                 }
