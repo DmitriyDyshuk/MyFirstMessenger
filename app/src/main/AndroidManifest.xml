@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.messengeralpha">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -10,31 +12,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".ui.main.fragments.settings.SettingsFragment"></activity>
-
-        <activity android:name=".ui.main.fragments.chats.ChatsFragment" />
-
+        <activity android:name=".ui.chat.ChatActivity"></activity>
         <activity android:name=".ui.main.MainActivity" />
-
         <activity
             android:name=".ui.registration.RegistrationActivity"
-            android:windowSoftInputMode="adjustResize"
-            android:theme="@style/RegistrationStyle"/>
-
+            android:theme="@style/RegistrationStyle"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".ui.splash.SplashActivity"
             android:theme="@style/SplashScreenTheme">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-
         <activity android:name=".ui.login.LoginActivity" />
-
     </application>
 
 </manifest>

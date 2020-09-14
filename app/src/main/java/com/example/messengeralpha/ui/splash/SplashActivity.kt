@@ -16,6 +16,7 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
         Realm.init(this)
 
+
         Handler().postDelayed({
             if (RealmHelper().getUser() != null) {
                 MainActivity.startActivity(this)

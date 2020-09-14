@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.registration.RegistrationActivity"
     android:orientation="vertical">
 
@@ -48,12 +48,13 @@
 
         </LinearLayout>
 
-        <ImageView
+        <com.github.siyamed.shapeimageview.mask.PorterShapeImageView
             android:id="@+id/ivAddPhoto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:src="@mipmap/image_add_photo_icon"
-            android:layout_marginTop="34dp"/>
+            android:layout_marginTop="35dp"
+            app:siShape="@drawable/drawable_circle_shape"/>
 
     </LinearLayout>
 

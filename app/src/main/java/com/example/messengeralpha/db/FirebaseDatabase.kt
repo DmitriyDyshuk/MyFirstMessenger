@@ -17,7 +17,7 @@ class FirebaseDatabase {
 
     fun addUser(user: User) {
         val reference = db.getReference(References.USERS.toString())
-        val id = reference.push().key
+        val id = if (user.id == null) reference.push().key else user.id
         user.id = id
         reference.child(id.toString()).setValue(user)
         Log.e("TagID", "$id")
@@ -51,7 +51,7 @@ class FirebaseDatabase {
     }
 
     fun getUsers(listener: OnChatsListener) {
-        db.getReference(References.USERS.toString()).addListenerForSingleValueEvent(object : ValueEventListener {
+        db.getReference(References.USERS.toString()).addValueEventListener(object : ValueEventListener {
             override fun onCancelled(error: DatabaseError) {}
 
             override fun onDataChange(snapshot: DataSnapshot) {
@@ -67,5 +67,4 @@ class FirebaseDatabase {
             }
         })
     }
-
 }
